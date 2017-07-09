@@ -2,7 +2,7 @@ version: "2"
 
 services:
   ss_ap:
-    image: yangxuan8282/ss
+    image: yangxuan8282/armhf-ss
     restart: unless-stopped
     privileged: true
     network_mode: "host"
