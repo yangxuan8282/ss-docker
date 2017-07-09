@@ -1,0 +1,15 @@
+version: "2"
+
+services:
+  ss_ap:
+    image: yangxuan8282/ss
+    restart: unless-stopped
+    privileged: true
+    network_mode: "host"
+    environment:
+      - SS_SERVER_IP=
+      - SS_SERVER_PORT=7443
+      - SS_METHOD=chacha20
+      - SS_PASSWD=
+      - SS_LOCAL_PORT= 
+      - SS_ARGS=
