@@ -12,4 +12,3 @@ services:
       - SS_METHOD=chacha20
       - SS_PASSWD=
       - SS_LOCAL_PORT= 
-      - SS_ARGS=
