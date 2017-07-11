@@ -2,6 +2,8 @@ version: "2"
 
 services:
   ss-client:
+    #for amd64:
+    #image: yangxuan8282/ss-client:amd64
     image: yangxuan8282/ss-client
     restart: unless-stopped
     privileged: true
