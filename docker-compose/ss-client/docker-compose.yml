@@ -1,9 +1,7 @@
 version: "2"
 
 services:
-  ss-client:
-    #for amd64:
-    #image: yangxuan8282/ss-client:amd64
+  ss_ap:
     image: yangxuan8282/ss-client
     restart: unless-stopped
     privileged: true
@@ -11,6 +9,9 @@ services:
     environment:
       - SS_SERVER_IP=
       - SS_SERVER_PORT=7443
-      - SS_METHOD=chacha20
+      - SS_METHOD=chacha20-ietf-poly1305
       - SS_PASSWD=
-      - SS_LOCAL_PORT= 
+      - SS_TIMEOUT=300
+      - SS_LOCAL_PORT=1080 
+      - SS_ARGS='--plugin obfs-local --plugin-opts "obfs=http;obfs-host=www.bing.com"'
+
