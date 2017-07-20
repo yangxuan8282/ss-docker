@@ -33,7 +33,7 @@ trap 'kill ${!}; term_handler' SIGTERM SIGINT
 
 ss-nat -f;
 ss-nat -s $SS_SERVER_IP -l $SS_LOCAL_PORT -i /chnroute.txt -u -o;
-ss-redir -u -s $SS_SERVER_IP -p $SS_SERVER_PORT -l $SS_LOCAL_PORT -k $SS_PASSWD -m $SS_METHOD $SS_ARGS -b 0.0.0.0 &
+ss-redir -u -s $SS_SERVER_IP -p $SS_SERVER_PORT -l $SS_LOCAL_PORT -k $SS_PASSWD -m $SS_METHOD -b 0.0.0.0 &
 pid="$!"
 
 # wait forever
