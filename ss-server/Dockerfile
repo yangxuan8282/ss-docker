@@ -17,6 +17,7 @@ RUN set -ex && \
                                 libsodium-dev \
                                 mbedtls-dev \
                                 pcre-dev \
+                                c-ares-dev \
                                 git \
                                 tar \
                                 udns-dev && \
@@ -38,7 +39,7 @@ RUN set -ex && \
             | xargs -r apk info --installed \
             | sort -u \
     )" && \
-    apk add --no-cache --virtual .run-deps $runDeps && \
+    apk add --no-cache --virtual .run-deps rng-tools $runDeps && \
     apk del .build-deps && \
     rm -rf /tmp/*
 
