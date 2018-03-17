@@ -1,9 +1,9 @@
 FROM alpine
 
-ENV SS_VER=3.0.8
+ENV SS_VER=3.1.3
 ENV SS_URL=https://github.com/shadowsocks/shadowsocks-libev/releases/download/v$SS_VER/shadowsocks-libev-$SS_VER.tar.gz
 
-ENV SIMPLE_OBFS_VER=0.0.3
+ENV SIMPLE_OBFS_VER=0.0.5
 
 RUN set -ex && \
     apk add --no-cache --virtual .build-deps \
